@@ -17,17 +17,6 @@ kotlin {
         }
     }
 
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
-        }
-    }
-
     sourceSets {
 
         androidMain.dependencies {
@@ -76,9 +65,14 @@ publishing {
         create<MavenPublication>("maven") {
             from(components["kotlin"])
             groupId = "org.example.project"
-            artifactId = "libraryDemo"
-            version = "0.0.1"
+            artifactId = "libDemo"
+            version = "0.0.4"
             artifact("$buildDir/outputs/aar/lib-release.aar")
+            pom {
+                name = "Library Demo"
+                description = "A description of the library."
+                url = "https://github.com/TaiebSlama/libDemo"
+            }
         }
     }
     repositories {
@@ -87,7 +81,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/TaiebSlama/libDemo")
             credentials {
                 username = "TaiebSlama"
-                password = "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"
+                password = "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"
             }
         }
     }
