@@ -78,7 +78,7 @@ publishing {
             groupId = "org.example.project"
             artifactId = "libraryDemo"
             version = "0.0.1"
-            artifact("$buildDir/output/aar/lib-release.aar")
+            artifact("$buildDir/outputs/aar/lib-release.aar")
         }
     }
     repositories {
