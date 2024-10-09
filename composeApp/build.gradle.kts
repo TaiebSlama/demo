@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    id("maven-publish")
 }
 
 kotlin {
@@ -43,6 +44,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(project(":lib"))
+            implementation("com.github.TaiebSlama:demo:1.0.0")
         }
     }
 }
