@@ -43,7 +43,6 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(project(":lib"))
-            implementation("com.github.TaiebSlama:demo:1.0.0")
         }
     }
 }
