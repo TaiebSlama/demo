@@ -6,10 +6,6 @@ on:
         description: 'Version Name'
         required: true
 
-      envirement:
-        description: 'Prod/Stag'
-        required: true
-
 jobs:
   publish:
     name: Publish
